@@ -39,11 +39,11 @@
     <img class="celeb-img" src="images/drake.jpeg" alt="Drake">
     <h1>Ellen DeGeneres' favorite things</h1>
     <img class="celeb-img" src="images/ellen.jpeg" alt="Ellen Degeneres">
-    <h1>Selena Gomez Is Avoiding Instagram</h1>
+    <h1>Selena is Avoiding Instagram</h1>
     <img class="celeb-img" src="images/gomez.jpeg" alt="Selena Gomez">
-    <h1>We Need To Talk About Ariana Grande's Diamond Teeth</h1>
+    <h1>We Need To Talk About Ariana's Diamond Teeth</h1>
     <img class="celeb-img" src="images/grande.jpeg" alt="Ariana Grande">
-    <h1>Everything We Know About Justin Bieber And Hailey Baldwin's Wedding</h1>
+    <h1>Justin And Hailey's Wedding</h1>
     <img class="celeb-img" src="images/hailey.jpeg" alt="Hailey and Justin Bieber">
   </main>
 
@@ -70,10 +70,10 @@
       <input type="hidden" name="id" value="6bd4d82a13">
       <div class="name-with-email">
         <div class="first-and-last">
-          <input class="name first-name" name="MERGE1" id="MERGE1" type="text" placeholder="First" required >
-          <input class="name last-name" name="MERGE2" id="MERGE2" type="text" placeholder="Last" required>
+          <input class="name first-name" name="MERGE1" id="MERGE1" type="text" placeholder="First" pattern="[a-zA-Z][a-zA-Z ]{2,}" required >
+          <input class="name last-name" name="MERGE2" id="MERGE2" type="text" placeholder="Last" pattern="[a-zA-Z][a-zA-Z ]{2,}" title="Numbers not allowed" required>
         </div>
-        <input class="email" name="MERGE0" id="MERGE0" type="text" placeholder="Email" required>
+        <input class="email" name="MERGE0" id="MERGE0" type="email" placeholder="Email" required>
         <button class="join">Join</button>
         <p class="spam">No spam, we hate it more than you do.</p>
         <p class="privacy"><a href="#">Privacy Policy</a></p>

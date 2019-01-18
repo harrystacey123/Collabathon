@@ -140,3 +140,11 @@ form {
     text-decoration: underline;
     text-align: center;
 }
+
+input:invalid {
+    border: solid red !important;
+}
+
+input:valid {
+    border: solid green !important;
+}
