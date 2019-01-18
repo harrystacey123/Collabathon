@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <!-- <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.js"></script> -->
-    <script src="/path/to/infinite-scroll.pkgd.min.js"></script>
+    <!-- <script src="/path/to/infinite-scroll.pkgd.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav>
+  <nav role="navigation">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Gossip News</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -31,19 +31,20 @@
     <li><a href="collapsible.html">TV</a></li>
     <li><a href="mobile.html">Kardashians</a></li>
   </ul>
-  <main>
+  <main role="main">
     <h1>Trending</h1>
-    <img class="celeb-img" src="images/beyonce.jpeg" alt="">
-    <h1>Title</h1>
-    <img class="celeb-img" src="images/drake.jpeg" alt="">
-    <h1>Title</h1>
-    <img class="celeb-img" src="images/ellen.jpeg" alt="">
-    <h1>Title</h1>
-    <img class="celeb-img" src="images/gomez.jpeg" alt="">
-    <h1>Title</h1>
-    <img class="celeb-img" src="images/grande.jpeg" alt="">
-    <h1>Title</h1>
-    <img class="celeb-img" src="images/hailey.jpeg" alt="">
+    <h1>Beyonce Shares New Pic of Twins</h1>
+    <img class="celeb-img" src="images/beyonce.jpeg" alt="Beyonce Knowles">
+    <h1>A Bootleg Drake Film Is on Netflix</h1>
+    <img class="celeb-img" src="images/drake.jpeg" alt="Drake">
+    <h1>Ellen DeGeneres' favorite things</h1>
+    <img class="celeb-img" src="images/ellen.jpeg" alt="Ellen Degeneres">
+    <h1>Selena Gomez Is Avoiding Instagram</h1>
+    <img class="celeb-img" src="images/gomez.jpeg" alt="Selena Gomez">
+    <h1>We Need To Talk About Ariana Grande's Diamond Teeth</h1>
+    <img class="celeb-img" src="images/grande.jpeg" alt="Ariana Grande">
+    <h1>Everything We Know About Justin Bieber And Hailey Baldwin's Wedding</h1>
+    <img class="celeb-img" src="images/hailey.jpeg" alt="Hailey and Justin Bieber">
   </main>
 
   <div class="join-our-newsletter">
@@ -64,15 +65,15 @@
     </div>
     <h1 class="newsletter-title">Join Our Newsletter</h1>
     <p class="gossip">Stay on top of the latest gossip</p>
-    <form action="https://twitter.us20.list-manage.com/subscribe/post" method="POST">
+    <form id="subscribe-form" action="https://twitter.us20.list-manage.com/subscribe/post-json" method="GET">
       <input type="hidden" name="u" value="9137e9b61c0854e4d31a8c07f">
       <input type="hidden" name="id" value="6bd4d82a13">
       <div class="name-with-email">
         <div class="first-and-last">
-          <input class="name first-name" name="MERGE1" id="MERGE1" type="text" placeholder="First">
-          <input class="name last-name" name="MERGE2" id="MERGE2" type="text" placeholder="Last">
+          <input class="name first-name" name="MERGE1" id="MERGE1" type="text" placeholder="First" required >
+          <input class="name last-name" name="MERGE2" id="MERGE2" type="text" placeholder="Last" required>
         </div>
-        <input class="email" name="MERGE0" id="MERGE0" type="text" placeholder="Email">
+        <input class="email" name="MERGE0" id="MERGE0" type="text" placeholder="Email" required>
         <button class="join">Join</button>
         <p class="spam">No spam, we hate it more than you do.</p>
         <p class="privacy"><a href="#">Privacy Policy</a></p>
@@ -80,11 +81,21 @@
     </form>
   </div>
 
-      <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.js"
-      integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-      crossorigin="anonymous"></script>
-      <script src="main.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <div class="join-our-newsletter-3" hidden>
+      <div class="icons">
+        <img class="invisible" src="images/Arrow-Up-2-icon.png" alt="">
+        <img class="chevron" src="images/Arrow-Up-2-icon.png" alt="">
+        <img class="cross" src="images/ic_close_48px-512.png" alt="">
+      </div>
+      <h1 class="newsletter-title">You're awesome!</h1>
+      <p class="gossip">You're now a gossip insider ;)</p>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
